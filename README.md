@@ -1,122 +1,113 @@
-# Create a Blockchain Decentralized Voting DApp
+# Decentralized Voting DApp
 
-Create a Blockchain Decentralized Voting DApp | Next.js, Solidity, Wagmi, Web3 Voting DApp Project
+A secure, transparent, and decentralized voting system built on Ethereum using Solidity smart contracts, Hardhat, Next.js, Tailwind CSS, and Wagmi.
 
 ## Project Overview
 
-![alt text](https://www.daulathussain.com/wp-content/uploads/2025/06/Create-a-Blockchain-Decentralized-Voting-DApp-Next.js-Solidity-Wagmi-Web3-Voting-DApp-Project.jpg)
+This decentralized voting application enables fair and transparent elections on the blockchain. It features voter registration, candidate management, secure ballot casting, and real-time verifiable election results.
 
-## Instruction
+### Features
 
-Kindly follow the following Instructions to run the project in your system and install the necessary requirements
+- **Decentralized Voting**: Tamper-proof voting secured by Ethereum smart contracts.
+- **Admin Dashboard**: Register eligible voters and candidates, and manage election phases.
+- **Voter Verification**: Transparent tracking of voter status to ensure one person, one vote.
+- **Live Results & Analytics**: Real-time vote tallying and interactive charts.
+- **Decentralized Storage**: IPFS integration (via Pinata) for storing candidate and voter metadata.
+- **Web3 Wallet Integration**: Seamless connection via Wagmi and WalletConnect/Reown.
 
-- [Final Source Code](https://www.theblockchaincoders.com/sourceCode/create-a-blockchain-decentralized-voting-dapp-or-next.js-solidity-wagmi-web3-voting-dapp-project)
+## Tech Stack
 
-#### Setup Video
+- **Smart Contracts**: Solidity, Hardhat
+- **Frontend**: Next.js, React, Tailwind CSS
+- **Web3 Integration**: Ethers.js, Wagmi, WalletConnect / Reown
+- **Decentralized Storage**: Pinata (IPFS)
 
-- [Final Code Setup video](https://youtu.be/92eaYx6GVis?si=Esy8dI8MV4h_HNz0)
+---
 
-Build a real-world Blockchain Voting DApp project using Next.js, Solidity, Wagmi, and Web3. This project will help you understand how to create a secure, transparent, and decentralized voting system on the Ethereum blockchain—step by step.
+## Getting Started
 
-🚀 What You’ll Build:
+### Prerequisites
 
-- Smart contracts for managing elections and votes using Solidity
-- Deployment scripts using Hardhat
-- A sleek, responsive frontend with Next.js
-- Wallet connection and Web3 interaction using Wagmi
-- Real-time blockchain interaction for voting and results
+- **Node.js**: `v18.17.1` or higher
+- **NPM**: `8.19.2` or higher
+- **MetaMask** or any Web3-compatible browser wallet
 
-🎯 This project is perfect for Web3 developers, students, or anyone looking to sharpen their skills by building a fully functional decentralized application.
+---
 
-✅ Tech Stack:
+### Installation & Setup
 
-- Solidity
-- Hardhat
-- React.js
-- Ethers.js / Wagmi
-- Web3Modal or RainbowKit
-- MetaMask / WalletConnect
-
-🛠️ Deploy to: Ethereum Mainnet/Testnet, Binance Smart Chain, and Polygon Network
-
-💸 Build real-world dApps that can attract users and generate revenue through staking and referrals!
-
-🔔 Don’t forget to Like, Share, and Subscribe for more Web3 tutorials!
-
-#### Deploying Dapp
-
-```
-  WATCH: Hostinger
-  Get : Discount 75%
-  URL: https://www.hostg.xyz/aff_c?offer_id=6&aff_id=139422
+#### 1. Clone the Repository
+```bash
+git clone https://github.com/anandyadav018/Advance-Voting-Dapp.git
+cd Advance-Voting-Dapp
 ```
 
-### MULTI-CURRENCY ICO DAPP
+#### 2. Install Dependencies
+```bash
+# Install frontend dependencies
+npm install
 
-```
-  PROJECT: MULTI-CURRENCY ICO DAPP
-  Code: https://www.theblockchaincoders.com/sourceCode/multi-currency-ico-dapp-using-next.js-solidity-and-wagmi
-  VIDEO: https://youtu.be/j8NO8ea5zVo?si=jCmvfXmpmefwjhO5
-```
-
-#### Install Vs Code Editor
-
-```
-  GET: VsCode Editor
-  URL: https://code.visualstudio.com/download
+# Install smart contract dependencies
+cd web3
+npm install
+cd ..
 ```
 
-#### NodeJs & NPM Version
+#### 3. Environment Configuration
+Create a `.env.local` file in the root directory based on the following template:
 
-```
-  NodeJs: v18.17.1 / LATEST
-  NPM: 8.19.2
-  URL: https://nodejs.org/en/download
-  Video: https://youtu.be/PIR0oBVowXU?si=9eNdR29u37F2ujJJ
-```
+```env
+# Platform Configuration
+NEXT_PUBLIC_PLATFORM_NAME=VotingDApp
 
-All you need to follow the complete project and follow the instructions which are explained in the tutorial by Daulat
+# Wallet Connect Configuration
+NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID=your_wallet_connect_project_id
 
-## Final Code Instruction
+# Network Configuration (Localhost)
+NEXT_PUBLIC_RPC_URL=http://127.0.0.1:8545
+NEXT_PUBLIC_CHAIN_ID=1337
+NEXT_PUBLIC_CHAIN_NAME=Localhost
+NEXT_PUBLIC_CHAIN_SYMBOL=ETH
+NEXT_PUBLIC_BLOCK_EXPLORER=http://localhost:8545
+NEXT_PUBLIC_NETWORK=localhost
+NEXT_PUBLIC_BLOCK_EXPLORER_NAME=Local Explorer
 
-If you download the final source code then you can follow the following instructions to run the Dapp successfully
+# Smart Contract Address (Update after deployment)
+NEXT_PUBLIC_VOTING_CONTRACT_ADDRESS=your_deployed_contract_address
 
-#### PINATA IPFS
-
-```
-  OPEN: PINATA.CLOUD
-  URL:https://pinata.cloud/
-```
-
-#### reown
-
-```
-  OPEN: WALLET CONNECT
-  URL: https://docs.reown.com/cloud/relay
-```
-
-#### FORMSPREE
-
-```
-  OPEN: FORMSPREE
-  URL: https://formspree.io/
+# Pinata IPFS Configuration
+NEXT_PUBLIC_PINATA_API_KEY=your_pinata_api_key
+NEXT_PUBLIC_PINATA_SECRET_API_KEY=your_pinata_secret_key
+NEXT_PUBLIC_PINATA_JWT=your_pinata_jwt
 ```
 
-#### ALCHEMY
+---
 
+### Running the Project Locally
+
+#### 1. Start Hardhat Local Node
+In a separate terminal:
+```bash
+cd web3
+npx hardhat node
 ```
-  OPEN: ALCHEMY.COM
-  URL: https://www.alchemy.com/
+
+#### 2. Deploy Smart Contract
+In another terminal:
+```bash
+cd web3
+npx hardhat run scripts/deploy.js --network localhost
 ```
+*Copy the deployed contract address and update `NEXT_PUBLIC_VOTING_CONTRACT_ADDRESS` in `.env.local`.*
 
-## Important Links
+#### 3. Start Next.js Development Server
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-- [Get Pro Blockchain Developer Course](https://www.theblockchaincoders.com/pro-nft-marketplace)
-- [Support Creator](https://bit.ly/Support-Creator)
-- [All Projects Source Code](https://www.theblockchaincoders.com/SourceCode)
+---
 
 ## Authors
 
-- [@theblockchaincoders.com](https://www.theblockchaincoders.com/)
-- [@consultancy](https://www.theblockchaincoders.com/consultancy)
-- [@youtube](https://www.youtube.com/@daulathussain)
+- **Anand Yadav** - [GitHub](https://github.com/anandyadav018)
